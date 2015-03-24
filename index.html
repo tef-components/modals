@@ -32,7 +32,7 @@
   <body>
     <div class="tef-wrapper">
       <header data-columns="2" data-columns-xs="1">
-        <h1>Buttons</h1>
+        <h1>Modals</h1>
         <div>
           <label>Change theme</label>
           <div class="tef-dropdown" data-icon="angle_down">
@@ -46,153 +46,84 @@
         </div>
       </header>
 
-      <h2>Default</h2>
-      <div class="tef-row">
-        <a href="" class="tef-button small">Small anchor</a>
-        <button class="tef-button small">Small button</button>
-      </div>
-      <div class="tef-row">
-        <a href="" class="tef-button">Default anchor</a>
-        <button class="tef-button">Default button</button>
-      </div>
-      <div class="tef-row">
-        <a href="" class="tef-button large">Large anchor</a>
-        <button class="tef-button large">Large Button</button>
-      </div>
-      <code>
-        <style>
-      <a href="" class="tef-button">Default anchor</a>
-      <button class="tef-button">Default button</button>
-        </style>
-      </code>
-
-      <h2>Positive</h2>
-      <button class="tef-button positive small">Small</button>
-      <button class="tef-button positive">Default</button>
-      <button class="tef-button positive large">Large</button>
-      <code>
-        <style>
-      <button class="tef-button positive small">Small</button>
-      <button class="tef-button positive">Default</button>
-      <button class="tef-button positive large">Large</button>
-        </style>
-      </code>
-
-      <h2>Negative</h2>
-      <button class="tef-button negative small">Small</button>
-      <button class="tef-button negative">Default</button>
-      <button class="tef-button negative large">Large</button>
-      <code>
-        <style>
-      <button class="tef-button negative small">Small</button>
-      <button class="tef-button negative">Default</button>
-      <button class="tef-button negative large">Large</button>
-        </style>
-      </code>
-
-      <h2>Subdued</h2>
-      <button class="tef-button subdued small">Small</button>
-      <button class="tef-button subdued">Default</button>
-      <button class="tef-button subdued large">Large</button>
-      <code>
-        <style>
-      <button class="tef-button subdued small">Small</button>
-      <button class="tef-button subdued">Default</button>
-      <button class="tef-button subdued large">Large</button>
-        </style>
-      </code>
-
-      <h2>Significant</h2>
-      <button class="tef-button significant small">Small</button>
-      <button class="tef-button significant">Default</button>
-      <button class="tef-button significant large">Large</button>
-      <code>
-        <style>
-      <button class="tef-button significant small">Small</button>
-      <button class="tef-button significant">Default</button>
-      <button class="tef-button significant large">Large</button>
-        </style>
-      </code>
-
-      <h2>Icons</h2>
-      <div class="tef-row">
-        <button class="tef-button small">
-          Add
-        </button>
-        <button class="tef-button small">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button small">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button small">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button">
-          Add
-        </button>
-        <button class="tef-button">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <div class="tef-row">
-        <button class="tef-button large">
-          Add
-        </button>
-        <button class="tef-button large">
-          <i data-icon="plus"></i>
-        </button>
-        <button class="tef-button large">
-          <i data-icon="plus"></i>
-          <span>Add</span>
-        </button>
-        <button class="tef-button large">
-          <span>Add</span>
-          <i data-icon="plus"></i>
-        </button>
-      </div>
-      <code>
-        <style>
-      <button class="tef-button small">
-        Add
+      <h2>Demo</h2>
+      <p>This button will add class "show" to "tef-modal" container, to make the modal visible.</p>
+      <button onclick="launchModal()" class="tef-button positive">
+        Launch modal window
       </button>
-      <button class="tef-button small">
-        <i data-icon="plus"></i>
-      </button>
-      <button class="tef-button small">
-        <i data-icon="plus"></i>
-        <span>Add</span>
-      </button>
-      <button class="tef-button small">
-        <span>Add</span>
-        <i data-icon="plus"></i>
-      </button>
+      <code>
+        <style>
+      <div class="tef-modal">
+        <div class="tef-dialog">
+          <header>Download started...</header>
+          <p>Downloading document. You will find it in your Downloads folder.</p>
+          <footer>
+            <button class="tef-button subdued">Cancel</button>
+            <button class="tef-button positive">Accept</button>
+          </footer>
+        </div>
+      </div>
         </style>
       </code>
 
-      <h2>Disabled</h2>
-      <button class="tef-button disabled">Default</button>
-      <button class="tef-button positive disabled">Positive</button>
-      <button class="tef-button negative disabled">Negative</button>
-      <button class="tef-button subdued disabled">Subdued</button>
-      <button class="tef-button significant disabled">Significant</button>
+      <div id="modal1" class="tef-modal">
+        <div class="tef-dialog">
+          <header>Download started...</header>
+          <p>Downloading document. You will find it in your Downloads folder.</p>
+          <footer>
+            <button onclick="closeModal()" class="tef-button subdued">
+              Cancel
+            </button>
+            <button onclick="closeModal()" class="tef-button positive">
+              Accept
+            </button>
+          </footer>
+        </div>
+      </div>
+
+      <h2>Dialog</h2>
+      <div class="tef-dialog">
+        <header>Download started...</header>
+        <p>Downloading document. You will find it in your Downloads folder.</p>
+        <footer>
+          <button class="tef-button subdued">Cancel</button>
+          <button class="tef-button positive">Accept</button>
+        </footer>
+      </div>
       <code>
         <style>
-      <button class="tef-button disabled">Default</button>
-      or
-      <button class="tef-button" disabled>Default</button>
+      <div class="tef-dialog">
+        <header>Download started...</header>
+        <p>Downloading document. You will find it in your Downloads folder.</p>
+        <footer>
+          <button class="tef-button subdued">Cancel</button>
+          <button class="tef-button positive">Accept</button>
+        </footer>
+      </div>
+        </style>
+      </code>
+
+      <h2>Dialog with close button</h2>
+      <div class="tef-dialog">
+        <header>
+          Download started...
+          <button class="tef-close" data-icon="close"></button>
+        </header>
+        <p>Downloading document. You will find it in your Downloads folder.</p>
+        <footer>
+          <button class="tef-button positive">Accept</button>
+        </footer>
+      </div>
+      <code>
+        <style>
+      <div class="tef-dialog">
+        <header>Download started...</header>
+        <p>Downloading document. You will find it in your Downloads folder.</p>
+        <footer>
+          <button class="tef-button subdued">Cancel</button>
+          <button class="tef-button positive">Accept</button>
+        </footer>
+      </div>
         </style>
       </code>
     </div>
@@ -205,6 +136,17 @@
           + theme.value + '/css/components.'
           + theme.value + '.css';
       });
+
+      function launchModal() {
+        var modal1 = document.getElementById('modal1');
+        var currentClass = modal1.getAttribute('class')
+        modal1.setAttribute('class', currentClass + ' show');
+      }
+
+      function closeModal() {
+        var modal1 = document.getElementById('modal1');
+        modal1.className = 'tef-modal';
+      }
     </script>
   </body>
 </html>
