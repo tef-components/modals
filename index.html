@@ -30,12 +30,12 @@
   </head>
 
   <body>
-    <div class="tef-wrapper tef-content">
+    <div class="tc-wrapper tc-content">
       <header columns="2 xs1">
         <h1>Modals</h1>
         <div>
           <label>Change theme</label>
-          <div class="tef-dropdown" icon="angle_down">
+          <div class="tc-dropdown" icon="angle_down">
             <select id="themeSelector">
               <option value="telefonica">Telefónica</option>
               <option value="movistar">Movistar</option>
@@ -47,34 +47,34 @@
       </header>
 
       <h2>Demo</h2>
-      <p>This button will add class "show" to "tef-modal" container, to make the modal visible.</p>
-      <button onclick="launchModal()" class="tef-button positive">
+      <p>This button will add class "show" to "tc-modal" container, to make the modal visible.</p>
+      <button onclick="launchModal()" class="tc-button positive">
         Launch modal window
       </button>
       <code>
         <style>
-      <div class="tef-modal">
-        <div class="tef-dialog">
+      <div class="tc-modal">
+        <div class="tc-dialog">
           <header>Download started...</header>
           <p>Downloading document. You will find it in your Downloads folder.</p>
           <footer>
-            <button class="tef-button subdued">Cancel</button>
-            <button class="tef-button positive">Accept</button>
+            <button class="tc-button subdued">Cancel</button>
+            <button class="tc-button positive">Accept</button>
           </footer>
         </div>
       </div>
         </style>
       </code>
 
-      <div id="modal1" class="tef-modal">
-        <div class="tef-dialog">
+      <div id="modal1" class="tc-modal">
+        <div class="tc-dialog">
           <header>Download started...</header>
           <p>Downloading document. You will find it in your Downloads folder.</p>
           <footer>
-            <button onclick="closeModal()" class="tef-button subdued">
+            <button onclick="closeModal()" class="tc-button subdued">
               Cancel
             </button>
-            <button onclick="closeModal()" class="tef-button positive">
+            <button onclick="closeModal()" class="tc-button positive">
               Accept
             </button>
           </footer>
@@ -82,48 +82,48 @@
       </div>
 
       <h2>Dialog</h2>
-      <div class="tef-dialog">
+      <div class="tc-dialog">
         <header>Download started...</header>
         <p>Downloading document. You will find it in your Downloads folder.</p>
         <footer>
-          <button class="tef-button subdued">Cancel</button>
-          <button class="tef-button positive">Accept</button>
+          <button class="tc-button subdued">Cancel</button>
+          <button class="tc-button positive">Accept</button>
         </footer>
       </div>
       <code>
         <style>
-      <div class="tef-dialog">
+      <div class="tc-dialog">
         <header>Download started...</header>
         <p>Downloading document. You will find it in your Downloads folder.</p>
         <footer>
-          <button class="tef-button subdued">Cancel</button>
-          <button class="tef-button positive">Accept</button>
+          <button class="tc-button subdued">Cancel</button>
+          <button class="tc-button positive">Accept</button>
         </footer>
       </div>
         </style>
       </code>
 
       <h2>Dialog with close button</h2>
-      <div class="tef-dialog">
+      <div class="tc-dialog">
         <header>
           Download started...
-          <button class="tef-close" icon="close"></button>
+          <button class="tc-close" icon="close"></button>
         </header>
         <p>Downloading document. You will find it in your Downloads folder.</p>
         <footer>
-          <button class="tef-button positive">Accept</button>
+          <button class="tc-button positive">Accept</button>
         </footer>
       </div>
       <code>
         <style>
-      <div class="tef-dialog">
+      <div class="tc-dialog">
         <header>
           Download started...
-          <button class="tef-close" icon="close"></button>
+          <button class="tc-close" icon="close"></button>
         </header>
         <p>Downloading document. You will find it in your Downloads folder.</p>
         <footer>
-          <button class="tef-button positive">Accept</button>
+          <button class="tc-button positive">Accept</button>
         </footer>
       </div>
         </style>
@@ -147,7 +147,7 @@
 
       function closeModal() {
         var modal1 = document.getElementById('modal1');
-        modal1.className = 'tef-modal';
+        modal1.className = 'tc-modal';
       }
     </script>
   </body>
