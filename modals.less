@@ -68,6 +68,8 @@
         color: white;
         background-color: @significant;
       }
+
+      &.block { width: 100%; }
     }
 
     p {
@@ -96,7 +98,7 @@
     .tc-button {
       display: block;
       width: 100%;
-      & + .tc-button { margin: 15px 0 0; }
+      & + .tc-button { margin: 7px 0 0; }
     }
 
     .media-min-xs({
@@ -104,7 +106,15 @@
         min-width: 120px;
         width: auto;
         display: inline-block;
+
+        &.block { width: 100%; }
+
         & + .tc-button { margin: 0 0 0 7px; }
+
+        &.block + .tc-button.block {
+          width: 100%;
+          margin: 7px 0 0;
+        }
       }
     });
 
